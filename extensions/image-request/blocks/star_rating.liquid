@@ -1,0 +1,33 @@
+
+<div class="flex flex-col text-center mb-2 mt-6 rounded-xl py-7 px-5 md:mx-0 mx-3 border border-gray-200">
+  <h3 class="uppercase font-header text-3xl">Want additional images?</h3>
+  <p class="pb-3 text-gray-500">Click the button below and we'll upload</p>
+  <button
+      is="party-button"
+      class="flex mt-4 hover:bg-gray-300 items-center w-48 justify-center text-center mx-auto py-3 px-2 rounded-xl bg-gray-200"
+  >
+      <span class="pr-5 font-sumono text-xs underline uppercase">Request</span>
+      <svg
+          xmlns="http://www.w3.org/2000/svg"
+          fill="none"
+          viewBox="0 0 24 24"
+          stroke-width="1.5"
+          stroke="currentColor"
+          class="w-5 h-5"
+      >
+          <path stroke-linecap="round" stroke-linejoin="round" d="M17.25 8.25 21 12m0 0-3.75 3.75M21 12H3" />
+      </svg>
+  </button>
+</div>
+
+
+{% schema %}
+{
+  "name": "Pre Owned Link",
+  "target": "section",
+  "javascript": "image-request.js",
+  "settings": [
+    { "type": "product", "id": "product", "label": "product", "autofill": true },
+  ]
+}
+{% endschema %}
