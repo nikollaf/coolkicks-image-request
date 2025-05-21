@@ -20,19 +20,32 @@ class PartyButton extends HTMLElement {
     this.emailRequestButton.classList.add("hidden");
     this.email.classList.remove("hidden");
     this.email.classList.add("field-6");
-    
   }
 
   sendEmail() {
     this.input = document.querySelector("#email");
+    this.validEmailText = document.querySelector("#valid-email");
     const email = this.input.value;
     this.productName = this.input.dataset.productName;
-    fetch(`https://topdrwr.io/coolkicks/image/request?name=${this.productName}&email=${email}`)
+    if (!isEmailValid(email)) {
+      this.validEmailText.classList.remove("hidden");
+      return;
+    }
+    fetch(
+      `https://topdrwr.io/coolkicks/image/request?name=${this.productName}&email=${email}`,
+    )
       .then((response) => response.json())
       .then((json) => console.log(json))
       .catch((error) => console.error("Error fetching:", error));
     document.querySelector("#email-div").outerHTML = "<p>Thank you!</p>";
   }
+
+
+}
+
+function isEmailValid(email) {
+  const pattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+  return pattern.test(email);
 }
 
 customElements.define("image-request", PartyButton);

@@ -3,7 +3,7 @@
 client_id = "96590c398565bb0725cef545506455ce"
 name = "image-request"
 handle = "image-request-1"
-application_url = "https://ended-narrative-assignment-rely.trycloudflare.com"
+application_url = "https://weapon-tail-associates-singh.trycloudflare.com"
 embedded = true
 
 [build]
@@ -19,9 +19,9 @@ scopes = "write_products"
 
 [auth]
 redirect_urls = [
-  "https://ended-narrative-assignment-rely.trycloudflare.com/auth/callback",
-  "https://ended-narrative-assignment-rely.trycloudflare.com/auth/shopify/callback",
-  "https://ended-narrative-assignment-rely.trycloudflare.com/api/auth/callback"
+  "https://weapon-tail-associates-singh.trycloudflare.com/auth/callback",
+  "https://weapon-tail-associates-singh.trycloudflare.com/auth/shopify/callback",
+  "https://weapon-tail-associates-singh.trycloudflare.com/api/auth/callback"
 ]
 
 [pos]
