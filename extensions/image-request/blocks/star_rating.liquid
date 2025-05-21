@@ -1,11 +1,11 @@
 
 {% assign title = block.settings.product.title  %}
 
-<div class="flex flex-col text-center mb-2 mt-6 rounded-xl py-7 px-5 md:mx-0 mx-3 border border-gray-200">
+<image-request class="flex flex-col text-center mb-2 mt-6 rounded-xl py-7 px-5 md:mx-0 mx-3 border border-gray-200">
   <h3 class="pb-1 uppercase font-header text-3xl">Need additional images?</h3>
   <p class="text-gray-500">Click the button below</p>
   <button
-      is="party-button"
+      id="email-request-button"
       class="flex mt-4 hover:bg-gray-300 items-center w-48 justify-center text-center mx-auto py-2 px-2 rounded-xl bg-gray-200"
   >
       <span class="pr-3 text-sm underline uppercase">Request</span>
@@ -28,7 +28,7 @@
       </path></svg>
     </button>
   </div>
-</div>
+</image-request>
 
 
 {% schema %}

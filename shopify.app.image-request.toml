@@ -3,7 +3,7 @@
 client_id = "96590c398565bb0725cef545506455ce"
 name = "image-request"
 handle = "image-request-1"
-application_url = "https://mobility-msie-flu-indicated.trycloudflare.com"
+application_url = "https://ended-narrative-assignment-rely.trycloudflare.com"
 embedded = true
 
 [build]
@@ -19,9 +19,9 @@ scopes = "write_products"
 
 [auth]
 redirect_urls = [
-  "https://mobility-msie-flu-indicated.trycloudflare.com/auth/callback",
-  "https://mobility-msie-flu-indicated.trycloudflare.com/auth/shopify/callback",
-  "https://mobility-msie-flu-indicated.trycloudflare.com/api/auth/callback"
+  "https://ended-narrative-assignment-rely.trycloudflare.com/auth/callback",
+  "https://ended-narrative-assignment-rely.trycloudflare.com/auth/shopify/callback",
+  "https://ended-narrative-assignment-rely.trycloudflare.com/api/auth/callback"
 ]
 
 [pos]

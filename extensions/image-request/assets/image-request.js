@@ -1,4 +1,4 @@
-class PartyButton extends HTMLButtonElement {
+class PartyButton extends HTMLElement {
   constructor() {
     super();
     this.isAnimating = false;
@@ -7,17 +7,20 @@ class PartyButton extends HTMLButtonElement {
   }
 
   connectedCallback() {
-    this.email = document.querySelector("#email-div");
-    this.addEventListener("click", this.showEmailInput);
+    this.emailRequestButton = document.querySelector("#email-request-button");
+    this.emailRequestButton.addEventListener("click", this.showEmailInput);
+    this.emailButton = document.querySelector("#email-button");
+    this.emailButton.addEventListener("click", this.sendEmail);
   }
 
   showEmailInput() {
-    this.classList.remove("flex");
-    this.classList.add("hidden");
+    this.emailRequestButton = document.querySelector("#email-request-button");
+    this.email = document.querySelector("#email-div");
+    this.emailRequestButton.classList.remove("flex");
+    this.emailRequestButton.classList.add("hidden");
     this.email.classList.remove("hidden");
     this.email.classList.add("field-6");
-    this.emailButton = document.querySelector("#email-button");
-    this.emailButton.addEventListener("click", this.sendEmail);
+    
   }
 
   sendEmail() {
@@ -32,4 +35,4 @@ class PartyButton extends HTMLButtonElement {
   }
 }
 
-customElements.define("party-button", PartyButton, { extends: "button" });
+customElements.define("image-request", PartyButton);
