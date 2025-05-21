@@ -3,7 +3,7 @@
 client_id = "96590c398565bb0725cef545506455ce"
 name = "image-request"
 handle = "image-request-1"
-application_url = "https://eden-mardi-typical-se.trycloudflare.com"
+application_url = "https://existed-gauge-mg-feeling.trycloudflare.com"
 embedded = true
 
 [build]
@@ -19,9 +19,9 @@ scopes = "write_products"
 
 [auth]
 redirect_urls = [
-  "https://eden-mardi-typical-se.trycloudflare.com/auth/callback",
-  "https://eden-mardi-typical-se.trycloudflare.com/auth/shopify/callback",
-  "https://eden-mardi-typical-se.trycloudflare.com/api/auth/callback"
+  "https://existed-gauge-mg-feeling.trycloudflare.com/auth/callback",
+  "https://existed-gauge-mg-feeling.trycloudflare.com/auth/shopify/callback",
+  "https://existed-gauge-mg-feeling.trycloudflare.com/api/auth/callback"
 ]
 
 [pos]

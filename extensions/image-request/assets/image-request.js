@@ -7,18 +7,26 @@ class PartyButton extends HTMLButtonElement {
   }
 
   connectedCallback() {
-    this.productName = this.dataset.productName;
-    this.addEventListener("click", this.partyTime);
+    this.email = document.querySelector("#email-div");
+    this.addEventListener("click", this.showEmailInput);
   }
 
-  partyTime() {
-    if (this.isAnimating) return;
-    fetch(`https://topdrwr.io/coolkicks/image/request?name=${this.productName}`)
+  showEmailInput() {
+    this.classList.add("hidden");
+    this.email.classList.remove("hidden");
+    this.emailButton = document.querySelector("#email-button");
+    this.emailButton.addEventListener("click", this.sendEmail);
+  }
+
+  sendEmail() {
+    this.input = document.querySelector("#email");
+    const email = this.input.value;
+    this.productName = this.input.dataset.productName;
+    fetch(`https://topdrwr.io/coolkicks/image/request?name=${this.productName}&email=${email}`)
       .then((response) => response.json())
       .then((json) => console.log(json))
       .catch((error) => console.error("Error fetching:", error));
-    this.isAnimating = true;
-    this.outerHTML = '<p>Thank you!</p>'
+    document.querySelector("#email-div").outerHTML = "<p>Thank you!</p>";
   }
 }
 
