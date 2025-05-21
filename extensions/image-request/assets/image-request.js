@@ -12,8 +12,10 @@ class PartyButton extends HTMLButtonElement {
   }
 
   showEmailInput() {
+    this.classList.remove("flex");
     this.classList.add("hidden");
     this.email.classList.remove("hidden");
+    this.email.classList.add("field-6");
     this.emailButton = document.querySelector("#email-button");
     this.emailButton.addEventListener("click", this.sendEmail);
   }
