@@ -1,12 +1,15 @@
 
+{% assign title = block.settings.product.title  %}
+
 <div class="flex flex-col text-center mb-2 mt-6 rounded-xl py-7 px-5 md:mx-0 mx-3 border border-gray-200">
-  <h3 class="uppercase font-header text-3xl">Want additional images?</h3>
-  <p class="pb-3 text-gray-500">Click the button below and we'll upload</p>
+  <h3 class="pb-1 uppercase font-header text-3xl">Need additional images?</h3>
+  <p class="text-gray-500">Click the button below</p>
   <button
       is="party-button"
-      class="flex mt-4 hover:bg-gray-300 items-center w-48 justify-center text-center mx-auto py-3 px-2 rounded-xl bg-gray-200"
+      data-product-name="{{ title }}"
+      class="flex mt-4 hover:bg-gray-300 items-center w-48 justify-center text-center mx-auto py-2 px-2 rounded-xl bg-gray-200"
   >
-      <span class="pr-5 font-sumono text-xs underline uppercase">Request</span>
+      <span class="pr-3 text-sm underline uppercase">Request</span>
       <svg
           xmlns="http://www.w3.org/2000/svg"
           fill="none"
