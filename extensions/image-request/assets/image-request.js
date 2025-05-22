@@ -27,7 +27,7 @@ class PartyButton extends HTMLElement {
     this.validEmailText = document.querySelector("#valid-email");
     const email = this.input.value;
     this.productName = this.input.dataset.productName;
-    this.selectedVariant = this.input.dataset.selectedVariant;
+    const selectedVariant = this.input.dataset.selectedVariant;
     if (!isEmailValid(email)) {
       this.validEmailText.classList.remove("hidden");
       return;
