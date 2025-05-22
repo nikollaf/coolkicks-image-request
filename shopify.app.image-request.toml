@@ -3,7 +3,7 @@
 client_id = "96590c398565bb0725cef545506455ce"
 name = "image-request"
 handle = "image-request-1"
-application_url = "https://weapon-tail-associates-singh.trycloudflare.com"
+application_url = "https://alternatives-rate-technologies-florist.trycloudflare.com"
 embedded = true
 
 [build]
@@ -19,9 +19,9 @@ scopes = "write_products"
 
 [auth]
 redirect_urls = [
-  "https://weapon-tail-associates-singh.trycloudflare.com/auth/callback",
-  "https://weapon-tail-associates-singh.trycloudflare.com/auth/shopify/callback",
-  "https://weapon-tail-associates-singh.trycloudflare.com/api/auth/callback"
+  "https://alternatives-rate-technologies-florist.trycloudflare.com/auth/callback",
+  "https://alternatives-rate-technologies-florist.trycloudflare.com/auth/shopify/callback",
+  "https://alternatives-rate-technologies-florist.trycloudflare.com/api/auth/callback"
 ]
 
 [pos]

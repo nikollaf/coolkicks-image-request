@@ -27,12 +27,13 @@ class PartyButton extends HTMLElement {
     this.validEmailText = document.querySelector("#valid-email");
     const email = this.input.value;
     this.productName = this.input.dataset.productName;
+    this.selectedVariant = this.input.dataset.selectedVariant;
     if (!isEmailValid(email)) {
       this.validEmailText.classList.remove("hidden");
       return;
     }
     fetch(
-      `https://topdrwr.io/coolkicks/image/request?name=${this.productName}&email=${email}`,
+      `https://topdrwr.io/coolkicks/image/request?name=${this.productName}&email=${email}&selected=${selectedVariant}`,
     )
       .then((response) => response.json())
       .then((json) => console.log(json))

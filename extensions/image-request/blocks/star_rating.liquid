@@ -1,7 +1,11 @@
 
 {% assign title = block.settings.product.title  %}
 
+{% assign selected_variant = block.settings.product.selected_or_first_available_variant  %}
+
 <image-request class="flex flex-col text-center mb-2 mt-6 rounded-xl py-7 px-5 md:mx-0 mx-3 border border-gray-200">
+
+  {{ selected_variant.title }}
   <h3 class="pb-1 uppercase font-header text-3xl">Need additional images?</h3>
   <p class="text-gray-500">Click the button below</p>
   <button
@@ -21,7 +25,7 @@
       </svg>
   </button>
   <div class="hidden" id="email-div">
-    <input type="email" data-product-name="{{ title }}" id="email" placeholder="Email" class="field__input-6">
+    <input type="email" data-product-name="{{ title }}" data-selected-variant="{{ selected_variant }}" id="email" placeholder="Email" class="field__input-6">
     <button class="field__button-6" id="email-button">
       <svg viewBox="0 0 14 10" fill="none" aria-hidden="true" focusable="false" class="icon icon-arrow" xmlns="http://www.w3.org/2000/svg">
         <path fill-rule="evenodd" clip-rule="evenodd" d="M8.537.808a.5.5 0 01.817-.162l4 4a.5.5 0 010 .708l-4 4a.5.5 0 11-.708-.708L11.793 5.5H1a.5.5 0 010-1h10.793L8.646 1.354a.5.5 0 01-.109-.546z" fill="currentColor">
